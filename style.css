@@ -5,7 +5,7 @@ body {
     color: white;
 }
 
-/* barra superior tipo OS */
+/* barra superior */
 #topbar {
     display: flex;
     gap: 20px;
@@ -29,31 +29,40 @@ body {
 /* páginas */
 .page {
     display: none;
-    padding: 80px 20px 20px;
-    min-height: 100vh;
+    padding: 80px 20px;
 }
 
-/* home visible al inicio */
+/* home visible */
 #home {
     display: block;
+    height: 100vh;
+}
+
+/* centro */
+.center {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* grid de servicios */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 /* tarjetas */
 .card {
     background: rgba(255,255,255,0.08);
     padding: 15px;
-    margin: 10px 0;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .card:hover {
-    background: rgba(37,99,235,0.6);
-}
-
-/* grid home */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 200px);
-    gap: 15px;
+    background: #2563eb;
+    transform: scale(1.05);
 }

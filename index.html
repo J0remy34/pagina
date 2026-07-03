@@ -3,32 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TechOS - Sistema de Soporte</title>
+<title>TechOS - Soporte Técnico</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- BARRA SUPERIOR -->
+<!-- NAVBAR -->
 <div id="topbar">
     <div onclick="goHome()">🏠 Inicio</div>
-    <div onclick="openPage('profile')">👤 Mi Perfil</div>
-    <div onclick="openPage('repair')">🔧 Reparación</div>
-    <div onclick="openPage('tips')">📌 Consejos</div>
-    <div onclick="openPage('support')">🛠 Soporte</div>
+    <div onclick="openPage('profile')">👤 Perfil</div>
 </div>
 
-<!-- HOME -->
+<!-- HOME CENTRADO -->
 <div class="page" id="home">
-    <h1>🖥 Bienvenido a TechOS</h1>
-    <p>Sistema de ayuda y reparación de computadoras</p>
 
-    <div class="grid">
-        <div class="card" onclick="openPage('repair')">🔧 Reparación</div>
-        <div class="card" onclick="openPage('tips')">📌 Consejos</div>
-        <div class="card" onclick="openPage('support')">🛠 Soporte</div>
-        <div class="card" onclick="openPage('profile')">👤 Mi Perfil</div>
+    <div class="center">
+        <h1>🖥 TechOS Support</h1>
+        <p>Plataforma de ayuda y reparación de computadoras</p>
+
+        <div class="grid">
+
+            <div class="card" onclick="openPage('repair')">
+                🔧 Reparación
+                <p>Soluciona problemas de tu PC</p>
+            </div>
+
+            <div class="card" onclick="openPage('maintenance')">
+                ⚡ Mantenimiento
+                <p>Optimiza el rendimiento del sistema</p>
+            </div>
+
+            <div class="card" onclick="openPage('security')">
+                🛡 Seguridad
+                <p>Protege tu computadora de virus</p>
+            </div>
+
+            <div class="card" onclick="openPage('support')">
+                🛠 Soporte
+                <p>Ayuda técnica personalizada</p>
+            </div>
+
+        </div>
     </div>
+
 </div>
 
 <!-- PERFIL -->
@@ -45,32 +63,62 @@
 
 <!-- REPARACIÓN -->
 <div class="page" id="repair">
-    <h1>🔧 Reparación de PC</h1>
+    <h1>🔧 Reparación de Computadoras</h1>
 
     <div class="card">
-        <h2>🦠 Virus</h2>
-        <p>Usa antivirus para eliminar amenazas del sistema.</p>
+        <h2>¿Qué es?</h2>
+        <p>Servicio para solucionar fallas físicas o del sistema operativo.</p>
     </div>
 
     <div class="card">
-        <h2>⚡ Lentitud</h2>
-        <p>Elimina programas innecesarios y limpia archivos temporales.</p>
+        <h2>Problemas comunes</h2>
+        <p>PC no enciende, pantalla azul, errores del sistema.</p>
     </div>
 
     <div class="card">
-        <h2>💾 Errores del sistema</h2>
-        <p>Usa herramientas como CHKDSK o restauración de Windows.</p>
+        <h2>Solución</h2>
+        <p>Revisión de hardware, reinstalación de sistema o reparación de archivos dañados.</p>
     </div>
 </div>
 
-<!-- CONSEJOS -->
-<div class="page" id="tips">
-    <h1>📌 Consejos</h1>
+<!-- MANTENIMIENTO -->
+<div class="page" id="maintenance">
+    <h1>⚡ Mantenimiento</h1>
 
-    <div class="card">✔ No descargues archivos desconocidos</div>
-    <div class="card">✔ Mantén antivirus activo</div>
-    <div class="card">✔ Reinicia tu PC cada semana</div>
-    <div class="card">✔ Actualiza Windows regularmente</div>
+    <div class="card">
+        <h2>¿Para qué sirve?</h2>
+        <p>Mantiene tu PC rápida y estable.</p>
+    </div>
+
+    <div class="card">
+        <h2>Incluye</h2>
+        <p>Limpieza de archivos, optimización de inicio, actualización de drivers.</p>
+    </div>
+
+    <div class="card">
+        <h2>Beneficios</h2>
+        <p>Mejor rendimiento y mayor duración del sistema.</p>
+    </div>
+</div>
+
+<!-- SEGURIDAD -->
+<div class="page" id="security">
+    <h1>🛡 Seguridad</h1>
+
+    <div class="card">
+        <h2>Protección</h2>
+        <p>Evita virus, malware y ataques externos.</p>
+    </div>
+
+    <div class="card">
+        <h2>Herramientas</h2>
+        <p>Antivirus, firewall y actualizaciones del sistema.</p>
+    </div>
+
+    <div class="card">
+        <h2>Recomendación</h2>
+        <p>No descargar archivos desconocidos y mantener todo actualizado.</p>
+    </div>
 </div>
 
 <!-- SOPORTE -->
@@ -78,18 +126,18 @@
     <h1>🛠 Soporte Técnico</h1>
 
     <div class="card">
-        <h2>💻 PC no enciende</h2>
-        <p>Revisa cables y fuente de poder.</p>
+        <h2>Ayuda rápida</h2>
+        <p>Solución de problemas comunes en minutos.</p>
     </div>
 
     <div class="card">
-        <h2>🌐 Internet lento</h2>
-        <p>Reinicia el router o revisa señal WiFi.</p>
+        <h2>Asistencia</h2>
+        <p>Diagnóstico de fallas de hardware y software.</p>
     </div>
 
     <div class="card">
-        <h2>🧠 Sistema fallando</h2>
-        <p>Usa modo seguro o restauración del sistema.</p>
+        <h2>Reparación guiada</h2>
+        <p>Te ayudamos paso a paso a arreglar tu PC.</p>
     </div>
 </div>
 
