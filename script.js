@@ -1,0 +1,1 @@
+console.log("Página cargada desde Nginx en AWS 🚀");
