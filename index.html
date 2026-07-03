@@ -1,17 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechOS - Soporte PC</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="login-box">
-    <h2>Iniciar Sesión</h2>
-    <input id="user" placeholder="Usuario"><br><br>
-    <input id="pass" type="password" placeholder="Contraseña"><br><br>
-    <button onclick="login()">Entrar al Sistema</button>
+<!-- MENÚ INICIO -->
+<div id="startMenu">
+    <button onclick="openWindow('help')">🛠 Soporte Técnico</button>
+    <button onclick="openWindow('repair')">💻 Reparación PC</button>
+    <button onclick="openWindow('tips')">📌 Consejos</button>
 </div>
 
-<script src="os.js"></script>
+<!-- VENTANAS -->
+<div class="window" id="helpWindow">
+    <div class="window-header">
+        Soporte Técnico
+        <span onclick="closeWindow('help')">✖</span>
+    </div>
+    <div class="window-content">
+        Bienvenido a TechOS Support.<br>
+        Aquí puedes aprender a solucionar problemas de tu PC.
+    </div>
+</div>
+
+<div class="window" id="repairWindow">
+    <div class="window-header">
+        Reparación PC
+        <span onclick="closeWindow('repair')">✖</span>
+    </div>
+    <div class="window-content">
+        🔧 Limpieza de virus<br>
+        🔧 Optimización del sistema<br>
+        🔧 Formateo seguro
+    </div>
+</div>
+
+<div class="window" id="tipsWindow">
+    <div class="window-header">
+        Consejos
+        <span onclick="closeWindow('tips')">✖</span>
+    </div>
+    <div class="window-content">
+        ✔ No descargues archivos raros<br>
+        ✔ Mantén antivirus activo<br>
+        ✔ Actualiza tu sistema
+    </div>
+</div>
+
+<!-- BARRA INFERIOR -->
+<div id="taskbar">
+    <div id="startBtn" onclick="toggleStart()">Inicio</div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
