@@ -1,1 +1,1 @@
-console.log("Página cargada desde Nginx en AWS 🚀");
+console.log("Sistema web AWS cargado 🚀");
