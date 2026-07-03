@@ -1,49 +1,47 @@
 body {
-    font-family: Arial;
     margin: 0;
+    font-family: Arial;
     background: #0f172a;
     color: white;
-    text-align: center;
 }
 
-header {
-    background: #2563eb;
-    padding: 15px;
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #1e293b;
+    position: fixed;
+    padding: 20px;
 }
 
-nav a {
+.sidebar a {
+    display: block;
     color: white;
-    margin: 10px;
+    margin: 15px 0;
     text-decoration: none;
 }
 
-.form-box {
-    margin: 50px auto;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
+.main {
+    margin-left: 240px;
+    padding: 20px;
 }
 
-input {
+.card {
+    background: #1e293b;
+    padding: 15px;
     margin: 10px;
+    border-radius: 10px;
+}
+
+input, button {
+    display: block;
+    margin: 10px 0;
     padding: 10px;
-    border-radius: 5px;
-    border: none;
+    width: 250px;
 }
 
 button {
-    padding: 10px;
     background: #22c55e;
     border: none;
     color: white;
     cursor: pointer;
-}
-
-button:hover {
-    background: #16a34a;
-}
-
-footer {
-    margin-top: 50px;
-    padding: 10px;
 }

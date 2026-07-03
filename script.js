@@ -1,1 +1,0 @@
-console.log("Sistema web AWS cargado 🚀");
