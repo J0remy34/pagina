@@ -5,7 +5,7 @@ body {
     color: white;
 }
 
-/* barra superior */
+/* barra */
 #topbar {
     display: flex;
     gap: 20px;
@@ -32,10 +32,8 @@ body {
     padding: 80px 20px;
 }
 
-/* home visible */
 #home {
     display: block;
-    height: 100vh;
 }
 
 /* centro */
@@ -44,25 +42,43 @@ body {
     margin-top: 60px;
 }
 
-/* grid de servicios */
+/* grid */
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 220px);
-    gap: 20px;
     justify-content: center;
-    margin-top: 40px;
+    gap: 20px;
 }
 
-/* tarjetas */
+/* cards */
 .card {
     background: rgba(255,255,255,0.08);
     padding: 15px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 0.3s;
+    border-radius: 10px;
+    margin: 10px 0;
 }
 
-.card:hover {
+/* alerta */
+.alert {
+    background: rgba(255,0,0,0.15);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* comentarios */
+input {
+    padding: 10px;
+    width: 60%;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
     background: #2563eb;
-    transform: scale(1.05);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TechOS - Soporte Técnico</title>
+<title>TechOS - Soporte Completo</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,41 +12,172 @@
 <!-- NAVBAR -->
 <div id="topbar">
     <div onclick="goHome()">🏠 Inicio</div>
+    <div onclick="openPage('info')">ℹ Información</div>
     <div onclick="openPage('profile')">👤 Perfil</div>
 </div>
 
-<!-- HOME CENTRADO -->
+<!-- HOME -->
 <div class="page" id="home">
 
     <div class="center">
         <h1>🖥 TechOS Support</h1>
-        <p>Plataforma de ayuda y reparación de computadoras</p>
+        <p>Sistema completo de ayuda y reparación de computadoras</p>
 
         <div class="grid">
 
             <div class="card" onclick="openPage('repair')">
                 🔧 Reparación
-                <p>Soluciona problemas de tu PC</p>
+                <p>Soluciona fallas de tu PC</p>
             </div>
 
             <div class="card" onclick="openPage('maintenance')">
                 ⚡ Mantenimiento
-                <p>Optimiza el rendimiento del sistema</p>
+                <p>Optimiza tu computadora</p>
             </div>
 
             <div class="card" onclick="openPage('security')">
                 🛡 Seguridad
-                <p>Protege tu computadora de virus</p>
+                <p>Protege tu sistema</p>
             </div>
 
             <div class="card" onclick="openPage('support')">
                 🛠 Soporte
-                <p>Ayuda técnica personalizada</p>
+                <p>Ayuda técnica completa</p>
             </div>
 
         </div>
     </div>
 
+</div>
+
+<!-- MANTENIMIENTO -->
+<div class="page" id="maintenance">
+    <h1>⚡ Mantenimiento del Sistema</h1>
+
+    <div class="card">
+        <h2>📌 ¿Qué es el mantenimiento?</h2>
+        <p>
+            El mantenimiento de una computadora es un proceso fundamental que permite mantener el sistema operativo
+            en óptimas condiciones. Esto incluye la limpieza de archivos innecesarios, la optimización del rendimiento,
+            la actualización de drivers y la revisión del estado general del equipo.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🔧 ¿Por qué es importante?</h2>
+        <p>
+            Sin mantenimiento, una computadora puede volverse lenta, inestable o incluso dejar de funcionar correctamente.
+            Mantener el sistema actualizado ayuda a prevenir errores, mejorar la velocidad y prolongar la vida útil del equipo.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🧠 Consejos</h2>
+        <p>
+            - Elimina archivos temporales cada semana.<br>
+            - Desinstala programas que no uses.<br>
+            - Reinicia tu PC regularmente.<br>
+            - Mantén Windows actualizado.
+        </p>
+    </div>
+
+    <div class="alert">
+        ⚠ Si tu computadora es muy lenta o presenta errores frecuentes, recomendamos pedir ayuda en nuestro sistema de soporte.
+    </div>
+
+    <!-- comentarios -->
+    <h2>💬 Comentarios</h2>
+
+    <div id="comments-maintenance"></div>
+
+    <input id="input-maintenance" placeholder="Escribe tu comentario...">
+    <button onclick="addComment('maintenance')">Enviar</button>
+</div>
+
+<!-- REPARACIÓN -->
+<div class="page" id="repair">
+    <h1>🔧 Reparación</h1>
+
+    <div class="card">
+        <h2>📌 Explicación</h2>
+        <p>
+            La reparación de computadoras incluye la solución de problemas físicos y de software.
+            Puede ir desde arreglar errores del sistema hasta reemplazar componentes dañados.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🧠 Ejemplos</h2>
+        <p>
+            Pantalla azul, PC que no enciende, virus o errores de sistema.
+        </p>
+    </div>
+
+    <div class="alert">
+        ⚠ Si tienes problemas graves, contacta soporte técnico.
+    </div>
+
+    <h2>💬 Comentarios</h2>
+    <div id="comments-repair"></div>
+    <input id="input-repair" placeholder="Escribe tu comentario...">
+    <button onclick="addComment('repair')">Enviar</button>
+</div>
+
+<!-- SEGURIDAD -->
+<div class="page" id="security">
+    <h1>🛡 Seguridad</h1>
+
+    <div class="card">
+        <p>
+            La seguridad informática protege tu computadora contra virus, malware y ataques externos.
+        </p>
+    </div>
+
+    <h2>💬 Comentarios</h2>
+    <div id="comments-security"></div>
+    <input id="input-security" placeholder="Escribe tu comentario...">
+    <button onclick="addComment('security')">Enviar</button>
+</div>
+
+<!-- SOPORTE -->
+<div class="page" id="support">
+    <h1>🛠 Soporte Técnico</h1>
+
+    <div class="card">
+        <p>
+            Nuestro soporte te ayuda a resolver problemas paso a paso con tu computadora.
+        </p>
+    </div>
+
+    <h2>💬 Comentarios</h2>
+    <div id="comments-support"></div>
+    <input id="input-support" placeholder="Escribe tu comentario...">
+    <button onclick="addComment('support')">Enviar</button>
+</div>
+
+<!-- INFO -->
+<div class="page" id="info">
+    <h1>ℹ Información de TechOS</h1>
+
+    <div class="card">
+        <p>
+            TechOS es una plataforma diseñada para ayudar a usuarios con problemas de computadoras,
+            ofreciendo guías, soporte y recomendaciones técnicas.
+        </p>
+    </div>
+
+    <div class="card">
+        <p>
+            ✔ Reparación de sistemas<br>
+            ✔ Mantenimiento de PC<br>
+            ✔ Seguridad informática<br>
+            ✔ Soporte técnico guiado
+        </p>
+    </div>
+
+    <div class="alert">
+        📢 Si necesitas ayuda personalizada, usa la sección de soporte.
+    </div>
 </div>
 
 <!-- PERFIL -->
@@ -58,86 +189,6 @@
         <p><b>Correo:</b> jeremy@email.com</p>
         <p><b>Número:</b> +56 9 1234 5678</p>
         <p><b>Dirección:</b> Santiago, Chile</p>
-    </div>
-</div>
-
-<!-- REPARACIÓN -->
-<div class="page" id="repair">
-    <h1>🔧 Reparación de Computadoras</h1>
-
-    <div class="card">
-        <h2>¿Qué es?</h2>
-        <p>Servicio para solucionar fallas físicas o del sistema operativo.</p>
-    </div>
-
-    <div class="card">
-        <h2>Problemas comunes</h2>
-        <p>PC no enciende, pantalla azul, errores del sistema.</p>
-    </div>
-
-    <div class="card">
-        <h2>Solución</h2>
-        <p>Revisión de hardware, reinstalación de sistema o reparación de archivos dañados.</p>
-    </div>
-</div>
-
-<!-- MANTENIMIENTO -->
-<div class="page" id="maintenance">
-    <h1>⚡ Mantenimiento</h1>
-
-    <div class="card">
-        <h2>¿Para qué sirve?</h2>
-        <p>Mantiene tu PC rápida y estable.</p>
-    </div>
-
-    <div class="card">
-        <h2>Incluye</h2>
-        <p>Limpieza de archivos, optimización de inicio, actualización de drivers.</p>
-    </div>
-
-    <div class="card">
-        <h2>Beneficios</h2>
-        <p>Mejor rendimiento y mayor duración del sistema.</p>
-    </div>
-</div>
-
-<!-- SEGURIDAD -->
-<div class="page" id="security">
-    <h1>🛡 Seguridad</h1>
-
-    <div class="card">
-        <h2>Protección</h2>
-        <p>Evita virus, malware y ataques externos.</p>
-    </div>
-
-    <div class="card">
-        <h2>Herramientas</h2>
-        <p>Antivirus, firewall y actualizaciones del sistema.</p>
-    </div>
-
-    <div class="card">
-        <h2>Recomendación</h2>
-        <p>No descargar archivos desconocidos y mantener todo actualizado.</p>
-    </div>
-</div>
-
-<!-- SOPORTE -->
-<div class="page" id="support">
-    <h1>🛠 Soporte Técnico</h1>
-
-    <div class="card">
-        <h2>Ayuda rápida</h2>
-        <p>Solución de problemas comunes en minutos.</p>
-    </div>
-
-    <div class="card">
-        <h2>Asistencia</h2>
-        <p>Diagnóstico de fallas de hardware y software.</p>
-    </div>
-
-    <div class="card">
-        <h2>Reparación guiada</h2>
-        <p>Te ayudamos paso a paso a arreglar tu PC.</p>
     </div>
 </div>
 
