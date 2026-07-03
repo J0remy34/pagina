@@ -3,58 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TechOS - Soporte PC</title>
+<title>TechOS - Sistema de Soporte</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- MENÚ INICIO -->
-<div id="startMenu">
-    <button onclick="openWindow('help')">🛠 Soporte Técnico</button>
-    <button onclick="openWindow('repair')">💻 Reparación PC</button>
-    <button onclick="openWindow('tips')">📌 Consejos</button>
+<!-- BARRA SUPERIOR -->
+<div id="topbar">
+    <div onclick="goHome()">🏠 Inicio</div>
+    <div onclick="openPage('profile')">👤 Mi Perfil</div>
+    <div onclick="openPage('repair')">🔧 Reparación</div>
+    <div onclick="openPage('tips')">📌 Consejos</div>
+    <div onclick="openPage('support')">🛠 Soporte</div>
 </div>
 
-<!-- VENTANAS -->
-<div class="window" id="helpWindow">
-    <div class="window-header">
-        Soporte Técnico
-        <span onclick="closeWindow('help')">✖</span>
-    </div>
-    <div class="window-content">
-        Bienvenido a TechOS Support.<br>
-        Aquí puedes aprender a solucionar problemas de tu PC.
-    </div>
-</div>
+<!-- HOME -->
+<div class="page" id="home">
+    <h1>🖥 Bienvenido a TechOS</h1>
+    <p>Sistema de ayuda y reparación de computadoras</p>
 
-<div class="window" id="repairWindow">
-    <div class="window-header">
-        Reparación PC
-        <span onclick="closeWindow('repair')">✖</span>
-    </div>
-    <div class="window-content">
-        🔧 Limpieza de virus<br>
-        🔧 Optimización del sistema<br>
-        🔧 Formateo seguro
+    <div class="grid">
+        <div class="card" onclick="openPage('repair')">🔧 Reparación</div>
+        <div class="card" onclick="openPage('tips')">📌 Consejos</div>
+        <div class="card" onclick="openPage('support')">🛠 Soporte</div>
+        <div class="card" onclick="openPage('profile')">👤 Mi Perfil</div>
     </div>
 </div>
 
-<div class="window" id="tipsWindow">
-    <div class="window-header">
-        Consejos
-        <span onclick="closeWindow('tips')">✖</span>
-    </div>
-    <div class="window-content">
-        ✔ No descargues archivos raros<br>
-        ✔ Mantén antivirus activo<br>
-        ✔ Actualiza tu sistema
+<!-- PERFIL -->
+<div class="page" id="profile">
+    <h1>👤 Mi Perfil</h1>
+
+    <div class="card">
+        <p><b>Nombre:</b> Jeremy</p>
+        <p><b>Correo:</b> jeremy@email.com</p>
+        <p><b>Número:</b> +56 9 1234 5678</p>
+        <p><b>Dirección:</b> Santiago, Chile</p>
     </div>
 </div>
 
-<!-- BARRA INFERIOR -->
-<div id="taskbar">
-    <div id="startBtn" onclick="toggleStart()">Inicio</div>
+<!-- REPARACIÓN -->
+<div class="page" id="repair">
+    <h1>🔧 Reparación de PC</h1>
+
+    <div class="card">
+        <h2>🦠 Virus</h2>
+        <p>Usa antivirus para eliminar amenazas del sistema.</p>
+    </div>
+
+    <div class="card">
+        <h2>⚡ Lentitud</h2>
+        <p>Elimina programas innecesarios y limpia archivos temporales.</p>
+    </div>
+
+    <div class="card">
+        <h2>💾 Errores del sistema</h2>
+        <p>Usa herramientas como CHKDSK o restauración de Windows.</p>
+    </div>
+</div>
+
+<!-- CONSEJOS -->
+<div class="page" id="tips">
+    <h1>📌 Consejos</h1>
+
+    <div class="card">✔ No descargues archivos desconocidos</div>
+    <div class="card">✔ Mantén antivirus activo</div>
+    <div class="card">✔ Reinicia tu PC cada semana</div>
+    <div class="card">✔ Actualiza Windows regularmente</div>
+</div>
+
+<!-- SOPORTE -->
+<div class="page" id="support">
+    <h1>🛠 Soporte Técnico</h1>
+
+    <div class="card">
+        <h2>💻 PC no enciende</h2>
+        <p>Revisa cables y fuente de poder.</p>
+    </div>
+
+    <div class="card">
+        <h2>🌐 Internet lento</h2>
+        <p>Reinicia el router o revisa señal WiFi.</p>
+    </div>
+
+    <div class="card">
+        <h2>🧠 Sistema fallando</h2>
+        <p>Usa modo seguro o restauración del sistema.</p>
+    </div>
 </div>
 
 <script src="script.js"></script>

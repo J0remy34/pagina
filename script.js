@@ -1,12 +1,17 @@
-function toggleStart() {
-    const menu = document.getElementById("startMenu");
-    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+function openPage(id) {
+
+    let pages = document.querySelectorAll(".page");
+
+    pages.forEach(p => p.style.display = "none");
+
+    document.getElementById(id).style.display = "block";
 }
 
-function openWindow(name) {
-    document.getElementById(name + "Window").style.display = "flex";
-}
+function goHome() {
 
-function closeWindow(name) {
-    document.getElementById(name + "Window").style.display = "none";
+    let pages = document.querySelectorAll(".page");
+
+    pages.forEach(p => p.style.display = "none");
+
+    document.getElementById("home").style.display = "block";
 }

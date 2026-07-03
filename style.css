@@ -1,80 +1,59 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #1e1e2f;
-    overflow: hidden;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
 }
 
-/* Barra inferior */
-#taskbar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 45px;
-    background: #111;
+/* barra superior tipo OS */
+#topbar {
     display: flex;
-    align-items: center;
-    padding: 0 10px;
-    color: white;
-}
-
-/* Botón inicio */
-#startBtn {
-    background: #0078d7;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Menú inicio */
-#startMenu {
-    position: absolute;
-    bottom: 50px;
-    left: 10px;
-    width: 220px;
-    background: #222;
-    border-radius: 10px;
-    display: none;
-    flex-direction: column;
-}
-
-#startMenu button {
-    background: none;
-    border: none;
-    color: white;
+    gap: 20px;
+    background: #111827;
     padding: 12px;
-    text-align: left;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#topbar div {
     cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
 }
 
-#startMenu button:hover {
-    background: #0078d7;
+#topbar div:hover {
+    background: #2563eb;
 }
 
-/* Ventanas */
-.window {
-    position: absolute;
-    width: 300px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px black;
+/* páginas */
+.page {
     display: none;
-    flex-direction: column;
+    padding: 80px 20px 20px;
+    min-height: 100vh;
 }
 
-.window-header {
-    background: #0078d7;
-    color: white;
-    padding: 8px;
-    display: flex;
-    justify-content: space-between;
+/* home visible al inicio */
+#home {
+    display: block;
 }
 
-.window-header span {
+/* tarjetas */
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
     cursor: pointer;
 }
 
-.window-content {
-    padding: 10px;
-    font-size: 14px;
+.card:hover {
+    background: rgba(37,99,235,0.6);
+}
+
+/* grid home */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 15px;
 }
