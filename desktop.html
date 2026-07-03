@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="desktop">
+
+    <div class="icon" onclick="openApp('Navegador')">
+        🌐<br>Browser
+    </div>
+
+    <div class="icon" onclick="openApp('Archivos')">
+        📁<br>Files
+    </div>
+
+    <div class="icon" onclick="openApp('Sistema')">
+        ⚙️<br>Settings
+    </div>
+
+    <div class="icon" onclick="openApp('Base de datos')">
+        🗄️<br>DB
+    </div>
+
+</div>
+
+<div class="taskbar">
+    Usuario: <span id="user"></span>
+    <button onclick="logout()" style="margin-left:auto;">Salir</button>
+</div>
+
+<script src="os.js"></script>
+
+<script>
+document.getElementById("user").innerText =
+localStorage.getItem("user");
+</script>
+
+</body>
+</html>
